@@ -165,7 +165,35 @@ body {
     
 }
 
-
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .small-header, .big-header {
+        flex-direction: column; /* Stack headers vertically */
+    }
+    
+    .icons-container {
+        flex-direction: column; /* Stack icons vertically */
+        gap: 10px; /* Reduce gap between icons */
+    }
+    
+    .location-login {
+        flex-direction: column; /* Stack location and login/signup vertically */
+        align-items: flex-start;
+    }
+    
+    .login-signup {
+        flex-direction: column; /* Stack login and signup vertically */
+        align-items: flex-start;
+    }
+    
+    .icons-left, .icons-right {
+        flex-direction: column; /* Stack icons vertically */
+    }
+    
+    #jd {
+        height: 16px; /* Adjust icon size for smaller screens */
+    }
+}
 
 /* Logo and Name styling */
 .logo-name {
@@ -200,7 +228,56 @@ body {
 .menu a:hover {
     text-decoration: underline;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .logo-name {
+        flex-direction: column; /* Stack logo and name vertically */
+        align-items: center; /* Center-align items */
+    }
 
+    .logo img {
+        height: 60px; /* Adjust logo size for smaller screens */
+    }
+
+    .name {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        white-space: normal; /* Allow text to wrap if needed */
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center-align menu items */
+        gap: 10px; /* Reduce gap between menu items */
+    }
+
+    .menu a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px; /* Add padding around menu items */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name {
+        padding: 5px; /* Reduce padding on very small screens */
+    }
+
+    .logo img {
+        height: 50px; /* Further reduce logo size for very small screens */
+    }
+
+    .name {
+        font-size: 18px; /* Further adjust font size for very small screens */
+    }
+
+    .menu {
+        gap: 5px; /* Further reduce gap between menu items */
+    }
+
+    .menu a {
+        font-size: 12px; /* Further adjust font size for very small screens */
+    }
+}
 
 /*login card*/
 .card {
