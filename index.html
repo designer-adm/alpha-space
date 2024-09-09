@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPHA SPACE SOLUTIONS PVT Ltd - architecture companies in Gurgaon</title>
+    <meta name="description" content="architecture companies in Gurgaon">
+    <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Adamina:wght@400;700&family=Muli:wght@400;700&family=Cambo:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="small-header" id="secondary-header">
+            <div class="icons-container">
+                <div class="icons-left">
+                    <a href="tel:9999114181" class="social-icon"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></a>
+                    <a href="mailto:alphaint43@gmail.com" class="social-icon"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></a>
+                    <a href="https://in.linkedin.com/in/sahil-srivastava-918669128" class="social-icon icon-in"><i class="fa-brands fa-linkedin" style="color: #fcfbfb;"></i></i></a>
+                    <a href="http://www.justdial.com/dt-23D8MAHJXPN" class="social-icon icon-jdLogo"><img id="jd" src="Assets/sprite_wb.png" alt="" srcset=""></a>
+                </div>
+                <div class="icons-right">
+                    <a href="tel:+91-9999114181" class="social-icon"><i class="fas fa-phone"></i>+91-9999114181</a>
+                    <a href="mailto:alphaint43@gmail.com" class="social-icon"><i class="fas fa-envelope"></i>alphaint43@gmail.com</a>
+                </div>
+            </div>
+            <div class="location-login">
+              <div class="loc-icon"><i class="fas fa-map-marker-alt"></i><span class="location">Vasant Kunj</span></div>
+              <div class="login-signup">
+                <i class="fas fa-user"></i>
+                <a href="#login" class="login-btn" id="login-btn">Log In</a>
+                <span class="separator"> | </span>
+                <a href="#signup" class="login-btn" id="signup-btn">Sign Up</a>
+            </div>
+        
+            <div class="card hidden" id="auth-card">
+                <button class="close-btn-login" id="close-btn">&times;</button>
+                <div class="card-section" id="logo-section">
+                    <div class="logo">
+                        <i>
+                        <div class="logo">
+                            <img src="https://image1.jdomni.in/storeLogo/20042024/85/9E/1D/ADD1226C3B1F06772CE578F6B2_1713604560706.png?output-format=webp" alt="Logo">
+                        </div></i>
+                        <p>We do not share your personal details with anyone</p>
+                    </div>
+                </div>
+                <div class="card-section" id="form-section">
+                    <div class="form-container" id="login-form">
+                        <div class="form-format">
+                        <h3>Log In</h3>
+                        <input type="text" id="login-mobile" placeholder="Mobile Number">
+                        <input type="password" id="login-password" placeholder="Password"><span class="span-login"><a href="#signup-form">Forgot?</a></span>
+                        <button class="form-btn" id="login-submit">Log In</button>
+                        <button class="form-btn" id="switch-to-signup">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="form-container hidden" id="signup-form">
+                        <div class="form-format">
+                        <h3>Sign Up</h3>
+                        <input type="text" id="signup-mobile" placeholder="Mobile Number">
+                        <button class="form-btn" id="signup-submit">Sign Up</button>
+                        <button class="form-btn" id="switch-to-login">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        <!-- Overlay
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+            </ul>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        
+    
+        <div class="big-header" id="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="https://image1.jdomni.in/storeLogo/20042024/85/9E/1D/ADD1226C3B1F06772CE578F6B2_1713604560706.png?output-format=webp" alt="Logo"></a>
+            </div>
+            <nav class="menu">
+                <a href="index.html">HOME</a>
+                <a href="#services">SERVICES</a>
+                <a href="#about">ABOUT US</a>
+                <a href="#ourproject">OUR PROJECTS</a>
+                <a href="#whyus">WHY US</a>
+                <a href="#projects">PROJECTS GALLERY</a>
+                <a href="#videos">VIDEOS</a>
+                <a href="#testimonial">TESTIMONIAL</a>
+                <a href="#contactus">CONTACT US</a>
+                <a href="#" class="more hidden">More</a>
+            </nav>
+        </div>
+        <div id="home" class="home-section">
+            <h1 class="pop-up">Top Architecture Company in India</h1>
+            <h1 class="pop-up">Transforming Spaces,</h1>
+            <h1 class="pop-up">Transforming Lives</h1>
+            <a href="javascript:void(0)" class="enquire-button-home pop-up" id="enquire-btn">Enquire Now</a>
+        </div>
+    </header>
+   <!-- Popup Form -->
+<div class="form-popup" id="enquire-popup">
+    <span class="close-btn" id="close-popup">&times;</span>
+    <div class="form-box">
+        <h2>Enquire Now</h2>
+        <form id="enquire-form" action="https://script.google.com/macros/s/AKfycbzKCkeqlLghO1XK_4_sg7WGLxBIJZdZUfBzRFEpsOwgK26RLVOnCD1wjDBuC0owh--v/exec" method="post">
+            <div class="input-field">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="mobile" id="mobile" required>
+                <label for="mobile">Mobile Number</label>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+                <textarea name="message" id="message" rows="4" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+  
+    <section class="intro-section">
+        <div class="intro-background">
+            <div class="intro-content">
+                <h1 class="pop-up">TYPES OF PROJECT</h1>
+                <p class="intro-description pop-up">ALPHA SPACE SOLUTIONS</p>
+                <div class="carousel pop-up">
+                    <div class="carousel-container">
+                        <img src="Assets/Capture.PNG" alt="Image 1" class="image-fade-in">
+                        <img src="Assets/blue poster.jpg" alt="Image 2" class="image-fade-in">
+                        <img src="Assets/brown poster.png" alt="Image 3" class="image-fade-in">
+                        <img src="Assets/poster hp.png" alt="Image 4" class="image-fade-in">
+                        <img src="Assets/Capture 2.PNG" alt="Image 5" class="image-fade-in">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="services" class="image-gallery">
+        <div class="gallery-background">
+            <div class="gallery-content">
+                <h2 class="image-fade-in">OUR SERVICES</h2>
+                <div class="gallery-grid">
+                    <!-- Visible images -->
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/map chart logic.png" alt="Gallery Image 1" class="grower"></div>
+                        <div class="gallery-item-p">Preparation of total project estimates after the finalization of layout</div>
+                        <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                        
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/arch house 3d.jpg" alt="Gallery Image 2" class="grower"></div>
+                        <div class="gallery-item-p">Preparation of photo realistic 3D visuals</div>
+                        <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/arch our service 3rd.jpg" alt="Gallery Image 3" class="grower"></div>
+                        <div class="gallery-item-p">Custom furniture designing & production guidance</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                         </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/leaf arch 3.jpeg" alt="Gallery Image 4" class="grower"></div>
+                        <div class="gallery-item-p">Environmental/ sustainable design consultation (LEED/ GRIHA/ IGBC)</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/deal key.jpeg" alt="Gallery Image 5" class="grower"></div>
+                        <div class="gallery-item-p">Complete management services till handover</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/map our service 6th.jpg" alt="Gallery Image 6" class="grower"></div>
+                        <div class="gallery-item-p">Pan India interior designing & architectural services complete execution services</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/arch temp.png" alt="Gallery Image 7" class="grower"></div>
+                        <div class="gallery-item-p">Design consulting: personal style consulting; includes accessory styling and planning based on Vaastu as well</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/mini sec3.jpeg" alt="Gallery Image 8" class="grower"></div>
+                        <div class="gallery-item-p">Complete execution services</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <!-- Hidden images -->
+                    <div class="gallery-grid-card hidden">
+                        <div class="gallery-item"><img src="Assets/arch work map.jpg" alt="Gallery Image 9" class="grower"></div>
+                        <div class="gallery-item-p">Furniture layout, integration or design & production guidance</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card hidden">
+                        <div class="gallery-item"><img src="Assets/int img.jpeg" alt="Gallery Image 10" class="grower"></div>
+                        <div class="gallery-item-p">Small & large scale renovations</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card hidden">
+                        <div class="gallery-item"><img src="Assets/tile arch ac.jpg" alt="Gallery Image 11" class="grower"></div>
+                        <div class="gallery-item-p">Small & large scale renovations</div>
+                        <div class="btn-enq">
+                        <a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                </div>
+                <div class="vm"><button id="view-more-btn" class="view-more-btn">View More</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pop-up container
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <p id="popup-message">Thank you for your submission!</p>
+        <button class="continue-button" onclick="closePopup()">Continue</button>
+    </div> -->
+    <!-- pop up -->
+    <div id="popup-card" class="popup-card hidden">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <div class="popup-content">
+            <div style="display: flex;
+            align-items: center;
+            margin-bottom: 80px;">
+                
+                <img id="popup-image" src="" alt="Selected Image">
+                <p id="popup-description"></p>
+            </div>
+            <hr>
+            <div >
+                <form id="enquiry-form" action="https://script.google.com/macros/s/AKfycbw-iEUotX4OQ98FPk08GUxVjtysCTchNTha1YuhQ6bjneyeEUbgtK6gLaIIT0SPQ3oa/exec" method="post">
+                   <label for="mobile-number">Personal Details</label>
+                   <input type="tel" id="mobile-number" name="mobile-number" placeholder="Number" required>
+                   <button type="submit" class="continue-button">Continue</button>
+                </form>
+                <p id="thank-you-message" style="display: none;">Thank you for your submission!</p>
+            </div>
+        </div>
+    </div>
+    <div id="loading" style="display: none;">Loading...</div>
+    <!-- Hidden iframe for form submission -->
+<iframe name="hidden-iframe" style="display: none;"></iframe>
+    <section class="image-gallery second-gallery">
+        <div class="gallery-background">
+            <div class="gallery-content">
+                <h2 class="image-fade-in">PREPARATION OF WORKING DRAWING</h2>
+                <h2 class="image-fade-in">Top Architecture Companies</h2>
+                <div class="gallery-subheading image-fade-in">ALPHA SPACE SOLUTIONS</div>
+                <div class="gallery-grid">
+                    <!-- Visible images -->
+                    <div class="gallery-grid-card">
+                        <div class="gallery-item"><img src="Assets/window cyc img.jpg" alt="Gallery Image 1" class="image"></div>
+                        <div class="gallery-item-p">DOOR & WINDOWNS</div>
+                        <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/pipes sec 3.jpg" alt="Gallery Image 2" class="image"></div>
+                    <div class="gallery-item-p">PLUMBING</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/download (1).jfif" alt="Gallery Image 3" class="image"></div>
+                    <div class="gallery-item-p">LANDSCAPE</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/furniture 4th 2nd section.jpg" alt="Gallery Image 4" class="image"></div>
+                    <div class="gallery-item-p">FURNITURE</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/ai cartn img.jpg" alt="Gallery Image 5" class="image"></div>
+                    <div class="gallery-item-p">MECHANICAL (HVAC)</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/sect 3 pyrimd.jpg" alt="Gallery Image 6" class="image"></div>
+                    <div class="gallery-item-p">LIGHTING</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/flooring 7th 2nd section.jpg" alt="Gallery Image 7" class="image"></div>
+                    <div class="gallery-item-p">FLOORING</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card">
+                    <div class="gallery-item"><img src="Assets/consts smoke img.jpg" alt="Gallery Image 8" class="image"></div>
+                    <div class="gallery-item-p">FIRE</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <!-- Hidden images -->
+                    <div class="gallery-grid-card hidden">
+                    <div class="gallery-item"><img src="Assets/download (2).jfif" alt="Gallery Image 9" class="image"></div>
+                    <div class="gallery-item-p">CEILING</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card hidden">
+                    <div class="gallery-item"><img src="Assets/download (3).jfif" alt="Gallery Image 10" class="image"></div>
+                    <div class="gallery-item-p">WALL TREATMENT</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card hidden">
+                    <div class="gallery-item"><img src="Assets/download (4).jfif" alt="Gallery Image 11" class="image"></div>
+                    <div class="gallery-item-p">ELECTRICAL</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                    <div class="gallery-grid-card hidden">
+                    <div class="gallery-item"><img src="Assets/download (5).jfif" alt="Gallery Image 12" class="image"></div>
+                    <div class="gallery-item-p">CIVIL</div>
+                    <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
+                    </div>
+                </div>
+                <button id="view-more-btn" class="view-more-btn">View More</button>
+            </div>
+        </div>
+    </section>
+    
+
+  <section id="about" class="about-section">
+    <div class="about-background">
+        <div class="about-content">
+            <h1 class="image-fade-in">About Us</h1>
+            <div class="logo-wrapper">
+                <img src="/Assets/logo abt us.png" alt="Company Logo" class="image-fade-in">
+            </div>
+            <div class="about-p image-fade-in">
+                Established in 1988, Alpha Space Solutions has been offering wide range of services in the field of architecture, interior/exterior designing.We have more than 30 years of experience in the Construction Industry.Whether designing residential or commercial spaces, Alpha has built a reputation on achieving high quality results for a broad clientele.One-Roof Solution for the total construction industry involving Site Survey, Development Architecture, Designing, Mechanical, Electrical, Plumbing, Fire,  Interior Works etc.
+                We are ably supported by an efficient team which include professional designers and supervisors. We strive to give our best services in this domain.
+                We, Alpha Space Solutions Pvt Ltd, situated at Vasant Kunj, Delhi, believe, good design is produced from careful study and research, combined with technical knowledge and artistic judgment. It's our aim to create spaces where people & activities thrive. Our team is capable of handling all the projects from the initial concept till the actual completion of the whole project.            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="directors-section">
+    <div class="directors-background">
+        <div class="blur"></div>
+        <div class="transparent">
+            
+          <div class="directors-content">
+            <div class="directors-content-h image-fade-in">DIRECTORS OF TOP DESIGN STUDIO IN INDIA</div>
+            <div class="directors-grid">
+                <div class="director-card">
+                    <img src="/Assets/Founder.png" alt="Director 1" class="image-fade-in">
+                    <div class="director-card-heading image-fade-in">MR. ASHISHA SRIVASTAVA
+                        FOUNDER
+                        </div>
+                    <div class="director-card-desc image-fade-in">"Meet the visionary force behind ALPHA, Mr.ASHISHA. Our esteemed founder ,with over 40 years of experience in the architecture & construction industury . He is the masterming who let team ALPHA in every project and single handedly took the firm to unimaginable heigths ! As the orchestrator or desing brilliance. He ensures that each project is executed seamlessly , on time , and within budget , while maintainning the highest standards of quality."</div>
+                </div>
+                <div class="director-card">
+                    <img src="/Assets/center logo.png" alt="Director 2" class="image-fade-in">
+                    <div class="director-card-heading-gold image-fade-in">ALPHA SPACE SOLUTIONS</div>
+                    <div class="director-card-desc image-fade-in">Since 1988, Alpha Space Solutions has been your go-to for all things construction. With over three decades of experience, we've mastered the art of architecture, interior, and exterior design. From initial site surveys to the final touches of interior works, we've got you covered. Whether it's residential or commercial, we're here to bring your vision to life with top-notch quality and innovative solutions. Think of us as your ultimate one-roof solution for all your construction needs.</div>
+                </div>
+                <div class="director-card">
+                    <img src="Assets/director 3.png" alt="Director 3" class="image-fade-in">
+                    <div class="director-card-heading image-fade-in">AR. SAAHIL SRIVASTAVA
+                        DESIGN HEAD</div>
+                    <div class="director-card-desc image-fade-in">"Introducing the creative powerhouse at the helm of our desing innovation Ar.SAAHIL . The desing head at alpha after completting his master degree in architectural association LONDON , He has an extraordinary flair for aesthetics and a profound understanding of desing principles.With a keen eye for desing and an unwavering passion for tranforming spaces, He is the creative genius behind the unique and captivating desing that define our firm."</div>
+                </div>
+            </div>
+          
+          </div>
+        </div>
+    </div>
+</section>
+
+  <section id="ourproject" class="projects-section">
+    <div class="projects-background">
+        <div class="projects-content">
+            <h2 id="#our-project" class="image-fade-in">LIST OF OUR PROJECTS</h2>
+            <h2 class="image-fade-in">ARCHITECTURE COMPANIES</h2>
+            <div class="ourproject-h-s image-fade-in">ALPHA SPACE SOLUTIONS</div>
+            <div class="projects-grid">
+                <div class="project-card image-fade-in"> 
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>
+                        Da Milano, Inorbit Malad, Mumbai - Complete Interior Work
+                        Da Milano, Khan Market, New Delhi -  Complete Interior Work
+                        Da Milano, Select City Walk Saket, New Delhi -  Complete Interior Work
+                        Da Milano, Pacific Mall, Dehradun - Complete Interior Work
+                        Da Milano, Subhash Nagar, New Delhi -  Complete Interior Work
+                        Da Milano, Chennai Express Avenue -  Complete Interior Work
+                        Da Milano, Domestic Terminal, New Delhi Airport -  Complete Interior Work
+                        Da Milano, Indra Nagar Bangalore -  Complete Interior Work
+                        Da Milano, Bhubaneswar Utkal -  Complete Interior Work
+                        Da Milano, Ahmedabad Alpha One  -  Complete Interior Work
+                        Da Milano, Phoenix Mall Lucknow -  Complete Interior Work
+                        Da Milano, Nagpur Trillium -  Complete Interior Work
+                        Da Milano, Chandigarh Airport -  Complete Interior Work.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>Da Milano, Ahmedabad Airport -  Complete Interior Work
+                        Da Milano, Jio World Mumbai -  Complete Interior Work
+                        Da Milano, Goa Airport -  Complete Interior Work
+                        Da Milano, T-2 Airport Mumbai -  Complete Interior Work
+                        Pazzion, Elante Mall, Chandigarh -  Complete Interior Work
+                        Rosso Brunello, Ambience Mall, New Delhi - Complete Interior Work
+                        Rosso Brunello, Saket - Complete Interior Work
+                        Rosso Brunello, Ludhiana - Complete Interior Work
+                        Rosso Brunello, Chandigarh- Complete Interior Work
+                        Rosso Brunello, Jaipur - Complete Interior Work
+                        Rosso Brunello, Lucknow Phoenix Mall  -  Complete Interior Work
+                        Rosso Brunello, Chennai Express Avenue  -  Complete Interior Work
+                        Pure Inn Hotel, Rishikesh - Complete Interior & amp; Exterior Work.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>Rosemount Hotel, Ranikhet - Complete Interior & amp; Exterior Work
+                        Hotel Surprise,Saharanpur(3-Star) -  Complete Interior Work
+                        Handloom Auditorium Janmanch, Saharanpur - Complete Interior Work	
+                        Handloom and Handicraft Co. NOIDA - Renovation Work involving site preparation for their Garment unit and complete electrical Work on Turnkey Basis
+                        Cosmic Software, NOIDA - Interior and Electrification, Furniture, site preparation on Turnkey basis 
+                        Hotel Swagat, Sharanpur (3-Star) - Restaurant Interior	
+                        Hotel Mansingh, Jaipur. (5-Star) - 20 Rooms Renovation	
+                        Global Diamond Pvt. Ltd. NEPZ NOIDA - Office Interior on Turnkey Basis	
+                        Mitsui, New Delhi - Office Interior on Turnkey Basis
+                        Auditorium Rotary Club, Sharanpur - Complete Interior Work
+                        HostelDee Pee Restaurant, New Delhi - Turnkey Interior
+                        Hostel For Maharishi Ayurveda - Turnkey Job.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>H & amp; H Corporate Buying Office, Arunachal Bhawan, New Delhi - Turnkey with Air Conditioning	
+                        d Herry Kabir Exim, Janakpuri, New Delhi - Turnkey works with Air Conditioning  	
+                        Herry Creation, Naraina New Delhi - Turnkey Works Garments Export House	
+                        Maharishi Ayurveda Co. Ltd. New Delhi - Office Interior on Turnkey Basis		
+                        Maharishi Ayurveda Products, NOIDA - Turnkey Interior		
+                        ARROW A.S. Exports, GURGAON - Electrification
+                        Cite’s Software Giant Mathura Road New Delhi - Complete I.T. Infrastructure
+                        H & amp; H Corporate Buying Office, Ambadeep, New Delhi - Turnkey Interior with Air Conditioning
+                        MHDFC Home Loan Project - Turnkey Interior
+                        Export Office Chirnanjiv Tower N. Place - Turnkey Interior
+                        Trade Office Chirnanjiv Tower N. Place - Turnkey Interior
+                        Khosla Hospital, Shalimar Bagh, New Delhi - Turnkey Interior.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>Sinar Mas / APP, MNC Paper Project - Turnkey Interior	
+                        Mohan Weizag Home Finance Noida - Turnkey Interior
+                        Mohan Gold Water Office Ansal Bhawan - Turnkey Interior	
+                        Avin International Noida - Turnkey Interior
+                        Garment Export Ind Noida - Turnkey Interior
+                        MIG International Noida - Turnkey Interior Incl. of Air Conditioning
+                        Maharishi Arogyadham Delhi, State of the Art Naturopathy Hospital
+                        YWCA Conference Works C. P Delhi - Turnkey Interior with Air Conditioning	
+                        ADVOCATE Office Saket Delhi - Turnkey Interior
+                        ICS Connect Verb Okhala Delhi - Turnkey Interior with Air Conditioning
+                        Trade Office Naurang House C.P Delhi - Turnkey Interior with Air Conditioning
+                        Stationary Indo Rama Office-1 C.P Delhi - Turnkey Interior with Air Conditioning
+                        Hotel Ajnta - Turnkey Interior.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>Stationary Indo Rama Office-1 DLF Gurgoan - Turnkey Interior with Air Conditioning
+                        MHDFC MPP PVT LTD Delhi - Turnkey Interior
+                        MHDFC ACCOUNT DEPT. Delhi - Turnkey Interior
+                        The Camp - Corbett
+                        Maharishi Solar Technology Delhi - Turnkey Interior with Air Conditioning
+                        Saivana Export Ptd. Ltd. Okhala Delhi - Turnkey Interior with Air Conditioning
+                        Cosmic Softech Limited Mathura Road - Turnkey Interior
+                        Veraz Network Pvt. Ltd. C. P. Delhi - Turnkey Interior with Air Conditioning
+                        Shreya Life Science Pvt. Ltd. C. P. Delhi - Turnkey Interior with Air Conditioning
+                        Shreya Life Science Pvt. Ltd. Ghaziabad UP - Turnkey Interior with Air Conditioning
+                        Indian Youth Congress, 5, Raisena Road New Delhi - Turnkey Interior
+                        DAV Trust Hostel Block Dehradun - Turnkey Interior
+                        Dainik Bhaskar DNA C. Place - Turnkey Interior.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>YWCA Fairhaven’s, Nainital - Complete Rehabilitation, Renovation of a Heritage Building	
+                        Hotel Zoomland, Nainital - Skating Rink, Rehabilitation Project	
+                        Hotel Cheveron, Ranikhet - Complete Turnkey Job of Rehabilitation of a Heritage Building	
+                        Ranikhet Club, Ranikhet - Turnkey job of Rehabilitation of Completely Burnt out Building	
+                        Mountain Villa KOUSANI - Rehabilitation and Furniture
+                        ECO Lodge Kousani - Complete eco-based project
+                        Hotel Chevron Badrinath - Rehabilitation and Furniture
+                        Mukteshwer - Rehabilitation and Furniture
+                        Hotel Chevron Badrinath - Rehabilitation and Furniture
+                        Parmarth Dham Trust Haridwar Uttaranchal - Turnkey Interior
+                        Pure Infra Ranikhet - Turnkey Interior.</p>
+                </div>
+                <div class="project-card image-fade-in">
+                    <h3>LIST OF COMMERCIAL PROJECTS</h3>
+                    <p>Cosmic Softech School Matura Road - Turnkey Interior of MBA-BBA Corporate Training School 		
+                        Cosmic PICASSO Animation School Centennial College, Canada Branch - Complete Turnkey Work	
+                        Cosmic Business School Mathura Road - Turnkey Interior with Air Conditioning		
+                        Cosmic Business School Mathura Road - Turnkey Interior with Air Conditioning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <section id="whyus" class="why-us-section">
+    <div class="why-us-background">
+        <div class="why-us-content">
+            <h2 class="image-fade-in">Why Us</h2>
+            <div class="why-us-cards">
+                <div class="why-us-card">
+                    <div class="card-icon">
+                        <!-- Replace with your icon -->
+                        <img src="Assets/why us icon.png" alt="" srcset="">
+                    </div>
+                    <img src="Assets/why us card 1 img.jpg" alt="Description for card 1">
+                    <p class="image-fade-in">Aim</p>
+                    <br>
+                    <p class="image-fade-in"> It's our aim to create spaces where people & activities thrive where customers get utmost satisfaction.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="card-icon">
+                        <!-- Replace with your icon -->
+                        <img src="Assets/contact icon.png" alt="" srcset="">
+                    </div>
+                    <img src="Assets/why us Team.jpg" alt="Description for card 2">
+                    <p class="image-fade-in">Team</p>
+                    <br>
+                    <p class="image-fade-in">Our team is capable of handling all the projects from the initial concept till the actual completion throughout.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="card-icon">
+                        <!-- Replace with your icon -->
+                        <img src="Assets/why us icon 3.png" alt="" srcset="">
+                        
+                    </div>
+                    <img src="/Assets/b&w building why us.png" alt="Description for card 3">
+                    <p class="image-fade-in">Design</p>
+                    <br>
+                    <p class="image-fade-in">Our firm strives to create design that inspires, approaching each project, regardless of the size & scale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="text-image-section">
+    <div class="text-image-background">
+        <div class="text-image-content">
+            <div class="text-image-left">
+                <div class="text-content image-fade-in">
+                    <div class="text-content-p image-fade-in">
+                    <!-- Replace with 1000 words of text -->
+                    Our founder has experience of 30 years in this industry, while the design head has a masters degree in architecture from one of the top colleges of architecture in the world, The Architectural Association London
+                    </div>
+<div class="text-content-p image-fade-in">
+We responsibly guide you through every aspect of the design process
+We deliver high quality work at highly competitive prices
+We design your interior to be timeless, sustainable, efficient and beautiful at the same time
+We select products for their impact on the environment, and their aesthetics, appropriateness and durability
+</div>
+<div class="text-content-p image-fade-in">
+We recommend reputable & responsible manufacturers and we partner with leading brands to ensure high quality delivery of work
+We manage your project with professionalism, respect, and integrity
+We execute the job in strict quality and time adherence
+</div>
+                </div>
+            </div>
+            <div class="text-image-right image-fade-in">
+                <img src="Assets/aboutus_b2b_web.png" alt="Description of image">
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="projects" class="image-gallery-section">
+    <h2>OUR ARCHITECTURE PROJECTS GALLERY</h2>
+    <div class="ourproject-h-s image-fade-in">ALPHA SPACE SOLUTIONS</div>
+    <div class="gallery-container">
+        <!-- Pagination Controls -->
+        <button class="pagination-btn prev" onclick="changePage(-1)">&#10094;</button>
+        <div class="gallery">
+            <div class="image-container">
+                <!-- Repeat this block for each image -->
+                <img class="gallery-item" src="Assets/1.webp" alt="Image 1" onclick="openModal(0)">
+                <img class="gallery-item" src="Assets/2.webp" alt="Image 2" onclick="openModal(1)">
+                <img class="gallery-item" src="Assets/3.webp" alt="Image 3" onclick="openModal(2)">
+                <img class="gallery-item" src="Assets/4.webp" alt="Image 4" onclick="openModal(3)">
+                <img class="gallery-item" src="Assets/5.webp" alt="Image 5" onclick="openModal(4)">
+                <img class="gallery-item" src="Assets/pg 6.png" alt="Image 6" onclick="openModal(5)">
+                <img class="gallery-item" src="Assets/pg 7.png" alt="Image 7" onclick="openModal(6)">
+                <img class="gallery-item" src="Assets/8.webp" alt="Image 8" onclick="openModal(7)">
+                <img class="gallery-item" src="Assets/9.webp" alt="Image 9" onclick="openModal(8)">
+              <img class="gallery-item" src="Assets/10.webp" alt="Image 10" onclick="openModal(9)">
+              <img class="gallery-item" src="Assets/111.webp" alt="Image 11"onclick="openModal(10)">
+              <img class="gallery-item" src="Assets/12.webp" alt="Image 12" onclick="openModal(11)">
+              <img class="gallery-item" src="Assets/13.webp" alt="Image 13" onclick="openModal(12)">
+              <img class="gallery-item" src="Assets/14.webp" alt="Image 14" onclick="openModal(13)">
+              <img class="gallery-item" src="Assets/15.webp" alt="Image 15" onclick="openModal(14)">
+              <img class="gallery-item" src="Assets/16.webp" alt="Image 16" onclick="openModal(15)">
+              <img class="gallery-item" src="Assets/pg 17.jpg" alt="Image 17" onclick="openModal(16)">
+              <img class="gallery-item" src="Assets/picaso.png" alt="Image 18" onclick="openModal(17)">
+              <img class="gallery-item" src="Assets/19.webp" alt="Image 19" onclick="openModal(18)">
+              <img class="gallery-item" src="Assets/20.webp" alt="Image 20" onclick="openModal(19)">
+              <img class="gallery-item" src="Assets/21.webp" alt="Image 21" onclick="openModal(20)">
+              <img class="gallery-item" src="Assets/main 1.webp" alt="Image 22" onclick="openModal(21)">
+              <img class="gallery-item" src="Assets/23.webp" alt="Image 23" onclick="openModal(22)">
+              <img class="gallery-item" src="Assets/24.webp" alt="Image 24" onclick="openModal(23)">
+              <img class="gallery-item" src="Assets/25.webp" alt="Image 25" onclick="openModal(24)">
+              <img class="gallery-item" src="Assets/26.webp" alt="Image 26" onclick="openModal(25)">
+              <img class="gallery-item" src="Assets/27.webp" alt="Image 27" onclick="openModal(26)">
+              <img class="gallery-item" src="Assets/28.webp" alt="Image 28" onclick="openModal(27)">
+              <img class="gallery-item" src="Assets/29.webp" alt="Image 29" onclick="openModal(28)">
+              <img class="gallery-item" src="Assets/30.webp" alt="Image 30" onclick="openModal(29)">
+              <img class="gallery-item" src="Assets/31.webp" alt="Image 31" onclick="openModal(30)">
+              <img class="gallery-item" src="Assets/32.webp" alt="Image 32" onclick="openModal(31)">
+              <img class="gallery-item" src="Assets/333.webp" alt="Image 33" onclick="openModal(32)">
+              <img class="gallery-item" src="Assets/34.webp" alt="Image 34" onclick="openModal(33)">
+              <img class="gallery-item" src="Assets/35.webp" alt="Image 35" onclick="openModal(34)">
+              <img class="gallery-item" src="Assets/36.webp" alt="Image 36" onclick="openModal(35)">
+              <img class="gallery-item" src="Assets/37.webp" alt="Image 37" onclick="openModal(36)">
+              <img class="gallery-item" src="Assets/38.webp" alt="Image 38" onclick="openModal(37)">
+              <img class="gallery-item" src="Assets/39.webp" alt="Image 39" onclick="openModal(38)">
+              <img class="gallery-item" src="Assets/40.webp" alt="Image 40" onclick="openModal(39)">
+              <img class="gallery-item" src="Assets/41.webp" alt="Image 41" onclick="openModal(40)">
+              <img class="gallery-item" src="Assets/42.webp" alt="Image 42" onclick="openModal(41)">
+              <img class="gallery-item" src="Assets/433.webp" alt="Image 43" onclick="openModal(42)">
+              <img class="gallery-item" src="Assets/444.webp" alt="Image 44" onclick="openModal(43)">
+              <img class="gallery-item" src="Assets/45.webp" alt="Image 45" onclick="openModal(44)">
+              <img class="gallery-item" src="Assets/46.webp" alt="Image 46" onclick="openModal(45)">
+              <img class="gallery-item" src="Assets/47.webp" alt="Image 47" onclick="openModal(46)">
+              <img class="gallery-item" src="Assets/48.webp" alt="Image 48" onclick="openModal(47)">
+              <img class="gallery-item" src="Assets/49.webp" alt="Image 49" onclick="openModal(48)">
+              <img class="gallery-item" src="Assets/50.webp" alt="Image 50" onclick="openModal(49)">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <button class="pagination-btn next" onclick="changePage(1)">&#10095;</button>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+        <img class="modal-content" id="modal-image">
+    </div>
+</section>
+<section id="videos" class="video-section">
+    
+    <div class="video-content">
+        <div class="background-image">
+            <div class="section-heading">
+                <h2 class="image-fade-in">OUR PROJECTS VIDEOS</h2>
+            </div>
+            <div class="video-container">
+                <div class="video-item">
+                    <iframe id="videoFrame" 
+                    src="https://www.youtube.com/embed/xz8DGp9SDb4?autoplay=0&mute=1&controls=1" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                    </iframe>
+                    <div class="video-desc-h">Why Hire an Architect</div>
+            
+                </div>
+                <div class="video-item">
+                    <iframe width="560" height="315" id="videoFrame" 
+                    src="https://www.youtube.com/embed/mfYj9mJh8Zk?si=u1wMXERjgBdtsHvP?autoplay=0&mute=1&controls=1" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                    </iframe>
+                    <div class="video-desc-h">What Does an Architect Do?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section id="testimonial" class="testimonial-section">
+    <div class="testimonial-content">
+        <div class="section-heading text-center">
+            <div class="test-img-c"><img src="Assets/test icon.png" alt="" srcset="" class="test-img-c-img"></div>
+            <h2 class="image-fade-in">Testimonials</h2>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <p>"The service was outstanding and the results exceeded our expectations. Highly recommend!"</p>
+                    <span>Pankaj Sharma</span>
+                </div>
+                <div class="slide">
+                    <p>"A professional team with great expertise. We are very pleased with the outcome."</p>
+                    <span>Neha Mishra</span>
+                </div>
+                <div class="slide">
+                    <p>"Fantastic experience from start to finish. Excellent attention to detail and customer service."</p>
+                    <span>Dubash Pal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section id="contactus" class="contact-us-section">
+    
+    <div class="contact-content">
+        <h2 class="image-fade-in">Contact Us</h2>
+        <div class="info-container">
+            <div class="info-item image-fade-in">
+                <div><img src="/Assets/loc icon.png" alt="" srcset=""></div>
+                <h3 class="sub-heading">Our Office Address</h3>
+                <div class="desc">C-5/43 Lower Ground Floor Near to Dps Vasant Kunj, Delhi 110070</div>
+            </div>
+            <hr>
+            <div class="info-item image-fade-in">
+                <div><img src="/Assets/mail icon.png" alt="" srcset=""></div>
+                <h3 class="sub-heading">General Enquiries</h3>
+                <div class="desc">websupport@justdial.com</div>
+            </div>
+            <hr>
+            <div class="info-item image-fade-in">
+                <div><img src="/Assets/40C3230EC67AE4493BC4FC6BEE_1634896347576.webp" alt="" srcset=""></div>
+                <h3 class="sub-heading">Call Us</h3>
+                <div class="desc">+91-9999114181</div>
+            </div>
+            <hr>
+            <div class="info-item image-fade-in">
+                <div><img src="/Assets/watch icon.png" alt="" srcset=""></div>
+                <h3 class="sub-heading">Our Timings</h3>
+                <div class="desc">Mon - Sun : 12:00 PM - 12:00 PM / 12:00 AM - 12:00 AM</div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<form action="https://script.google.com/macros/s/AKfycby0p-W65587w2grCXcpVuayhNd6K0qKulXQt-SXAnMIJUfUqSQYaaKSGzspb-hjUpqWkA/exec" method="post" class="rf al-form" id="order_form" name="contact-form">
+    <div class="form__wrap">
+        <div class="form-left">
+            <div class="form-group">
+                <input class="form-control" id="full-name" name="full-name" placeholder="Full Name" type="text" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="number" name="number" placeholder="Phone Number" type="tel" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
+            </div>
+        </div>
+        <div class="form-right">
+            <div class="form-group">
+                <textarea class="form-control" name="message" id="message" rows="8" placeholder="Message"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="submit-container">
+        <button type="submit" class="submit-button image-fade-in">Submit</button>
+    </div>
+</form>
+<div id="loading">Submitting, please wait...</div>
+
+  <section class="map-section">
+        <div class="map-iframe-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28052.420628940505!2d77.11829194060059!3d28.49301811433067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f00651aec2d%3A0xb7751cf913e90485!2sAlpha%20Space%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1725364073872!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- First Div: Useful Links, Our Projects, Contact -->
+        <div class="footer-section">
+            <!-- Useful Links -->
+            <div class="footer-links">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="policy.html">Privacy Policy</a></li>
+                    
+                    <li><a href="#services">SERVICES</a></li>
+                    
+                        <li><a href="#ourproject">OUR PROJECTS</a></li>
+                        
+                        <li><a href="#projects">PROJECTS GALLERY</a></li>
+                        
+                        <li><a href="#testimonial">TESTIMONIAL</a></li>
+                        
+                </ul>
+            </div>
+            <!-- Our Projects -->
+            <div class="footer-projects">
+               <h3></h3>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#whyus">WHY US</a></li>
+                    <li><a href="#videos">VIDEOS</a></li>
+                    <li><a href="#contactus">CONTACT US</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h3>CONTACT</h3>
+                <p>259.1ST FLOOR, SILVER OAK FARM ROAD, GHITORNI, NEW DELHI-110030</p>
+                <p>+91-9999114181</p>
+                <p><a href="mailto:alphaint43@gmail.com">alphaint43@gmail.com</a></p>
+            </div>
+            <!-- Connect -->
+            <div class="footer-connect">
+                <h3>CONNECT</h3>
+                <!-- Add any social media links or additional contact methods here -->
+                <div class="jd-j"><a href="https://in.linkedin.com/in/sahil-srivastava-918669128" class="social-icon icon-in"><i class="fa-brands fa-linkedin" style="color: #fcfbfb;"></i></i></a>
+                <a href="http://www.justdial.com/dt-23D8MAHJXPN" class="social-icon icon-jdLogo"><img id="jd" src="Assets/sprite_wb.png" alt="" srcset=""></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div>© Copyrights 2024 - 2025.Alpha Space Solutions Pvt Ltd.All Rights Reserved.</div>
+    </div>
+    <div class="footer-copyright-jd">
+        <span>Powered By</span><img class="footer-copyright-jd-img" src="Assets/JustdialLogo.png" alt="">
+    </div><div class="footer-copyright-right">
+        <a href="https://www.justdial.com/Delhi/Alpha-Space-Solutions-Pvt-Ltd-Vasant-Kunj/011PXX11-XX11-230731121540-M3J9_BZDET"><img src="Assets/(6).png" alt=""></a>
+    </div>
+</footer>
+
+
+<button class="scroll-to-top" aria-label="Scroll to top">&#11165;</button>
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+    <img src="/Assets/whatsapp-brands-solid.svg" alt="" srcset="">
+</a>
+
+<script src="js/login-signup.js"></script>
+<script src="js/enquire.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
