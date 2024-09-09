@@ -969,7 +969,7 @@ form button:hover {
 .view-more-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #f39c12;
+    background-color: #458ddb;
     color: white;
     border: none;
     border-radius: 5px;
@@ -979,7 +979,7 @@ form button:hover {
 }
 
 .view-more-btn:hover {
-    background-color: #e67e22;
+    background-color: #60a7f3;
 }
 /*Pop-up for enquire*/
 /* Add this to your existing CSS */
@@ -1169,7 +1169,7 @@ button[type="submit"] {
 .view-more-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #f39c12;
+    background-color: #458ddb;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1179,7 +1179,7 @@ button[type="submit"] {
 }
 
 .view-more-btn:hover {
-    background-color: #e67e22;
+    background-color: #6aa8eb;
 }
 /* Section 4: About Us Section */
 .about-section {
