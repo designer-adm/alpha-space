@@ -929,7 +929,7 @@ button[type="submit"]:hover {
 
 /* Input Styling */
 .popup-content input {
-    width: 100%; /* Full width for mobile */
+    width: 90%; /* Full width for mobile */
     padding: 10px;
     margin-bottom: 20px; /* Adjust bottom margin */
     border-radius: 5px;
@@ -1086,7 +1086,6 @@ button[type="submit"]:hover {
 }
 .pp-hidden{
     display: flex;
-    
     justify-content: center;
 }
 .view-more-btn {
@@ -1604,7 +1603,7 @@ button[type="submit"]:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -1621,8 +1620,9 @@ button[type="submit"]:hover {
     display: block;
     max-width: 80%;
     max-height: 80%;
-    margin: auto;
+    margin: 90% 40px;
     border-radius: 10px; /* Optional: for rounded corners */
+    z-index: 1003;
 }
 
 /* Close Button */
@@ -2390,3 +2390,9 @@ body {
     text-align: right;
     display: block;
 }
+
+
+/*loading*/
+/* styles.css */
+
+

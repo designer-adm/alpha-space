@@ -138,3 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.height = initialHeight + 'px';
     });
 });
+// scripts.js
+// scripts.js
+
