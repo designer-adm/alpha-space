@@ -312,6 +312,7 @@
                </div>
             </div>
                     <!-- Hidden images -->
+                    <div class="gallery-grid">
                     <div class="pp-hidden">
                     <div class="gallery-grid-card hidden">
                     <div class="gallery-item"><img src="Assets/download (2).jfif" alt="Gallery Image 9" class="image"></div>
@@ -340,6 +341,7 @@
                     <div class="btn-enq"><a href="javascript:void(0)" class="enquire-button" id="enquire-btn">Enquire Now</a></div>
                     </div>
                 </div>
+            </div>
                 </div>
                 </div>
                 <button id="view-more-btn" class="view-more-btn">View More</button>
@@ -877,25 +879,35 @@ We execute the job in strict quality and time adherence
     const galleryGrid = document.querySelector('.gallery-grid');
 
     let expanded = false;
-    let initialHeight = section.scrollHeight;
+
+    // Function to set the section's height to 'auto' and get its scrollHeight
+    function getExpandedHeight() {
+        section.style.height = 'auto'; // Set to auto to get the full height
+        const expandedHeight = section.scrollHeight; // Get the full height
+        section.style.height = ''; // Remove inline height to allow it to be responsive
+        return expandedHeight;
+    }
+
+    let initialHeight = section.scrollHeight; // Get the initial height
 
     viewMoreButton.addEventListener('click', function() {
         if (!expanded) {
             hiddenCards.forEach(card => card.classList.remove('hidden'));
             galleryGrid.style.opacity = 1;
             viewMoreButton.textContent = 'View Less';
-            section.style.height = 'auto';
+            section.style.height = getExpandedHeight() + 'px'; // Expand to full height
             expanded = true;
         } else {
             hiddenCards.forEach(card => card.classList.add('hidden'));
             galleryGrid.style.opacity = 1;
             viewMoreButton.textContent = 'View More';
-            section.style.height = initialHeight + 'px';
+            section.style.height = initialHeight + 'px'; // Collapse to default height
             expanded = false;
         }
         section.offsetHeight; // Force reflow
     });
 });
+
 </script>
 </body>
 </html>

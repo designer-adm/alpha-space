@@ -1086,6 +1086,7 @@ button[type="submit"]:hover {
 }
 .pp-hidden{
     display: flex;
+    
     justify-content: center;
 }
 .view-more-btn {
