@@ -1628,7 +1628,7 @@ button[type="submit"]:hover {
 /* Close Button */
 .close {
     position: absolute;
-    top: 20px;
+    top: 100px;
     right: 20px; /* Adjust this value to position the button as needed */
     color: #fff;
     font-size: 40px;
