@@ -434,21 +434,34 @@ input[type="text"], input[type="password"] {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 35%;
+    width: 90%;
     max-width: 600px;
+    position: relative; /* Position relative for the close button to be absolute within this container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; /* Adjust for spacing from top */
+    right: 10px; /* Adjust for spacing from right */
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    z-index: 1010; /* Ensure it's above other elements */
 }
 
 .input-field {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
 }
 
 .input-field input,
 .input-field textarea {
-    width: 95%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .input-field label {
@@ -469,14 +482,6 @@ input[type="text"], input[type="password"] {
     color: #007bff;
 }
 
-.close-btn {
-    position: absolute;
-    top: 80px;
-    right: 430px;
-    font-size: 40px;
-    cursor: pointer;
-}
-
 button[type="submit"] {
     background-color: #007bff;
     color: #fff;
@@ -484,10 +489,44 @@ button[type="submit"] {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .close-btn {
+        font-size: 20px;
+    }
+
+    .form-box {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-box {
+        padding: 10px;
+    }
+
+    .input-field {
+        margin-bottom: 15px;
+    }
+
+    .input-field label {
+        top: 5px;
+        left: 5px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
 
 .div-policy{
@@ -640,7 +679,7 @@ button[type="submit"]:hover {
 @media (min-width: 992px) {
     .home-section {
         padding: 80px 100px; /* Adjust padding for larger screens */
-        flex-direction: row; /* Align items in a row for larger screens */
+        flex-direction: column; /* Align items in a row for larger screens */
         text-align: left; /* Align text to the left */
     }
 
@@ -854,6 +893,7 @@ button[type="submit"]:hover {
 /* Existing CSS... */
 
 /* Pop-up Card Styles */
+/* Popup Card Styling */
 .popup-card {
     position: fixed;
     top: 0;
@@ -863,63 +903,69 @@ button[type="submit"]:hover {
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 1000;
     transition: opacity 0.3s ease;
-    justify-content: center;
-    flex-wrap: nowrap;
 }
 
+/* Popup Content Styling */
 .popup-content {
     background: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
-    width: 30%;
-    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    /* Ensure image and text are in a row */
 }
 
+/* Flex Container for Image and Text */
+.popup-content > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Image Styling */
 .popup-content img {
-    width: 20%;
+    width: 30%;
     height: auto;
     border-radius: 8px;
-    margin-right: 20px;
-    /* Space between image and text */
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent image from shrinking */
 }
 
-.popup-content .description {
-    width: 55%;
-    text-align: left;
-    /* Ensure text doesn't stretch too much */
-}
-
+/* Text Description Styling */
 .popup-content p {
-    display: contents;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin: 0; /* Remove margin to avoid spacing issues */
+    flex: 1; /* Allow text to take up remaining space */
 }
 
+/* Form Styling */
 .popup-content form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* Align form elements to the left */
 }
 
+/* Label Styling */
 .popup-content label {
     font-size: 16px;
     margin-bottom: 5px;
 }
 
+/* Input Styling */
 .popup-content input {
-    width: 90%;
+    width: 100%; /* Full width for mobile */
     padding: 10px;
-    margin-bottom: 200px;
+    margin-bottom: 20px; /* Adjust bottom margin */
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
+/* Button Styling */
 .continue-button {
     padding: 10px 20px;
     background-color: #0056b3;
@@ -930,35 +976,62 @@ button[type="submit"]:hover {
     font-size: 16px;
     transition: background-color 0.3s;
 }
-button[type="submit"] {
-    /* display: flex; */
-    font-size: 20px;
-    position: relative;
-    /* left: 35%; */
-    background-color: #eb4b4b;
-    color: #fff;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 40px;
-    cursor: pointer;
-}
 
 .continue-button:hover {
     background-color: #e67e22;
 }
 
+/* Close Button Styling */
 .close-popup {
     position: absolute;
-    top: 50px;
-    left: 66%;
+    top: 10px;
+    right: 10px;
     font-size: 24px;
     cursor: pointer;
     color: #000;
-    z-index: 1000;
-
 }
-.close-popup .hidden {
-    display: none;
+
+/* Responsive Styles */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .popup-content {
+        width: 40%; /* Adjust width for tablets */
+        padding: 20px;
+    }
+
+    .popup-content img {
+        width: 40%; /* Adjust image size for tablets */
+        margin-right: 10px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 40%; /* Adjust width for mobile */
+        padding: 15px;
+    }
+
+    .popup-content img {
+        width: 30%; /* Adjust image size for mobile */
+        margin-right: 10px;
+    }
+
+    .popup-content p {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .continue-button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .close-popup {
+        font-size: 20px; /* Adjust close button size */
+        top: 5px;
+        right: 5px;
+    }
 }
 
 /* Section 3: Another Image Gallery */
@@ -1049,7 +1122,7 @@ button[type="submit"] {
 /* Section 4: About Us Section */
 .about-section {
     position: relative;
-    height: 700px; /* Adjust height as needed */
+    height: 1000px; /* Adjust height as needed */
     overflow: hidden;
 }
 
