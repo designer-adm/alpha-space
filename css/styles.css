@@ -1515,9 +1515,6 @@ button[type="submit"]:hover {
         padding: 50px 0; /* Reduce padding for very small screens */
     }
 }
-.second-gallery{
-    height: 2200px;
-}
 
 /* General Styles */
 .image-gallery-section{
