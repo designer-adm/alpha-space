@@ -1011,14 +1011,8 @@ button[type="submit"]:hover {
     color: white;
     padding: 40px 20px;
     text-align: center;
-}
-.second-gallery {
     overflow: hidden;
     transition: height 0.5s ease; /* Smooth transition for height changes */
-}
-
-.gallery-grid-card.hidden {
-    display: none;
 }
 
 .gallery-background {
@@ -1027,7 +1021,8 @@ button[type="submit"]:hover {
     color: white;
     text-align: center;
 }
-.gallery-background h2{
+
+.gallery-background h2 {
     margin-top: 0;
     /* padding: 20px; */
 }
@@ -1041,29 +1036,44 @@ button[type="submit"]:hover {
     font-size: 36px; /* Adjust as needed */
     margin-bottom: 20px;
 }
+
 .gallery-subheading {
     margin: 50px;
 }
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Default to 4 columns */
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 2 columns on tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .gallery-grid-card {
     border-radius: 8px;
     overflow: hidden;
-    /* background-color: white; */
     opacity: 0;
     transform: translateY(30px);
     transition: transform 0.5s ease, opacity 0.3s ease; /* Smooth transition for card visibility */
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    justify-content: center;
-    
-}
 .gallery-grid-card.show {
     opacity: 1;
     transform: translateY(0);
 }
+
 .gallery-item img {
     width: 100%;
     border-radius: 8px;
@@ -1074,7 +1084,10 @@ button[type="submit"]:hover {
 .hidden {
     display: none;
 }
-
+.pp-hidden{
+    display: flex;
+    justify-content: center;
+}
 .view-more-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -1090,6 +1103,7 @@ button[type="submit"]:hover {
 .view-more-btn:hover {
     background-color: #6aa8eb;
 }
+
 /* Section 4: About Us Section */
 .about-section {
     position: relative;
