@@ -285,52 +285,73 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-let currentImageIndex = 0;
-
 document.addEventListener('DOMContentLoaded', function () {
     // Ensure modal is hidden on page load
     closeModal();
 });
+// scripts.js
+const itemsPerPage = 9;
+let currentPage = 1;
+
+function showPage(page) {
+    const gallery = document.querySelector('.image-container');
+    const totalImages = gallery.children.length;
+    const totalPages = Math.ceil(totalImages / itemsPerPage);
+    
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    
+    currentPage = page;
+    
+    Array.from(gallery.children).forEach((img, index) => {
+        img.style.display = 'none';
+        if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
+            img.style.display = 'block';
+        }
+    });
+
+    document.querySelector('.prev').disabled = currentPage === 1;
+    document.querySelector('.next').disabled = currentPage === totalPages;
+}
+
+function changePage(direction) {
+    showPage(currentPage + direction);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showPage(currentPage);
+});
+// scripts.js
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.image-container img');
+const modal = document.getElementById('modal');
+const modalImage = document.getElementById('modal-image');
 
 function openModal(index) {
-    const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modal-image');
-    const images = document.querySelectorAll('.gallery-item');
-
     currentImageIndex = index;
-    modalImage.src = images[currentImageIndex].src;
-    modal.style.display = 'flex'; // Show modal
+    modal.style.display = 'block';
+    updateModalImage();
 }
 
 function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none'; // Hide modal
+    modal.style.display = 'none';
 }
 
 function changeImage(direction) {
-    const images = document.querySelectorAll('.gallery-item');
-    currentImageIndex += direction;
-
-    if (currentImageIndex >= images.length) {
-        currentImageIndex = 0; // Loop to the first image
-    } else if (currentImageIndex < 0) {
-        currentImageIndex = images.length - 1; // Loop to the last image
-    }
-
-    const modalImage = document.getElementById('modal-image');
-    modalImage.src = images[currentImageIndex].src; // Update modal image
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    updateModalImage();
 }
 
-// Close the modal if clicked outside of the content
-window.addEventListener('click', function (event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
+function updateModalImage() {
+    modalImage.src = images[currentImageIndex].src;
+}
+
+// Close the modal if the user clicks outside the image
+window.onclick = function(event) {
+    if (event.target == modal) {
         closeModal();
     }
-});
-
-
+}
 
 
 

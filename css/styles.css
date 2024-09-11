@@ -785,15 +785,14 @@ button[type="submit"]:hover {
     }
 }
 
-/* section2*/
+/* Base styles */
 .image-gallery {
     background-color: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
     padding: 40px 20px;
     text-align: center;
-    overflow: hidden; /* Hide overflowing content */
-    transition: height 0.3s ease; /* Smooth transition for height changes */
-    position: relative; /* Ensure it can expand/collapse without affecting other sections */
+    overflow: hidden;
+    position: relative;
 }
 
 .gallery-background {
@@ -805,69 +804,45 @@ button[type="submit"]:hover {
     margin: 0 auto;
 }
 
-.gallery-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
-    transition: transform 0.3s ease; /* Smooth transition for grid visibility */
 }
 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* Additional styles */
 .gallery-grid-card {
     border-radius: 8px;
     overflow: hidden;
-    /* background-color: white; */
-    opacity: 0;
-    transform: translateY(30px);
-    transition: transform 0.5s ease, opacity 0.3s ease; /* Smooth transition for card visibility */
-}
-
-/* Show class to trigger animation */
-.gallery-grid-card.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .gallery-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
 }
 
 .gallery-item-p {
     margin: 10px;
     font-size: 16px;
-    color: #ffffff;
 }
 
 .enquire-button {
     display: block;
     padding: 15px;
-    margin: 10px;
     background-color: rgba(96, 152, 168, 1);
     color: white;
     text-decoration: none;
     border-radius: 40px;
-    border-color: #000000;
-    border-width: 2px;
-    outline: 2px solid #000000;
     font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.enquire-button:hover {
-    background-color: #458ddb;
-}
-
-.hidden {
-    display: none;
 }
 
 .view-more-btn {
@@ -879,12 +854,8 @@ button[type="submit"]:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
 }
 
-.view-more-btn:hover {
-    background-color: #60a7f3;
-}
 /*Pop-up for enquire*/
 /* Add this to your existing CSS */
 
@@ -1425,9 +1396,8 @@ button[type="submit"]:hover {
 }
 
 /* Section: Text and Image */
+/* Base Styles */
 .text-image-section {
-    
-    /* padding: 40px 20px; */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1440,19 +1410,14 @@ button[type="submit"]:hover {
 }
 
 .text-image-background {
-    background-image: url('/Assets/bg\ img\ behind\ why\ us.jpg'); /* Replace with your background image */
+    background-image: url('/Assets/bg img behind why us.jpg'); /* Ensure the correct path and format */
     width: 100%;
     padding: 100px 0;
     background-size: cover;
     background-position: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
     background-attachment: fixed;
     z-index: -1;
+    position: relative;
 }
 
 .text-image-content {
@@ -1461,30 +1426,35 @@ button[type="submit"]:hover {
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    
+    flex-wrap: nowrap; /* Allows wrapping on smaller screens */
 }
+
 .text-content-p { 
     font-family: 'Muli', sans-serif;
-    text-align: center;
-    line-height: 2;
+    text-align: left; /* Changed from center for better readability */
+    line-height: 1.6;
     margin-bottom: 20px;
+}
+
+.text-image-left, .text-image-right {
+    padding: 20px; /* Unified padding for symmetry */
 }
 
 .text-image-left {
     width: 50%;
-    padding-right: 20px; /* Adjust as needed */
+    /* No padding-right needed, only padding on the right for responsive */
 }
 
 .text-content {
-    font-size: 16px; /* Adjust as needed */
+    font-size: 16px; /* Base font size */
     line-height: 1.6;
-    max-height: 600px; /* Adjust height to ensure text fits well */
+    max-height: 600px; /* Adjust to ensure text fits well */
     overflow-y: auto; /* Allows scrolling if text exceeds max-height */
 }
 
 .text-image-right {
     width: 50%;
-    padding-left: 20px; /* Adjust as needed */
+    /* No padding-left needed, only padding on the left for responsive */
 }
 
 .text-image-right img {
@@ -1494,6 +1464,7 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .text-image-background::before {
     content: "";
     position: absolute;
@@ -1504,30 +1475,77 @@ button[type="submit"]:hover {
     background: rgba(0, 0, 0, 0.8); /* Adjust rgba value for desired transparency */
     z-index: -1;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .text-image-content {
+        flex-direction: column-reverse; /* Stack vertically on medium screens */
+        align-items: center;
+    }
+
+    .text-image-left, .text-image-right {
+        width: 100%; /* Full width on medium screens */
+        padding: 10px; /* Reduced padding */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text-image-left, .text-image-right {
+        width: 100%;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .text-content {
+        font-size: 14px; /* Smaller font size */
+        max-height: none; /* Allow text to flow naturally */
+    }
+
+    .text-image-right img {
+        max-width: 90%; /* Ensure images fit well */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-content-p {
+        font-size: 12px; /* Even smaller font size for very small screens */
+        line-height: 1.4; /* Adjust line height for better readability */
+    }
+
+    .text-image-background {
+        padding: 50px 0; /* Reduce padding for very small screens */
+    }
+}
+.second-gallery{
+    height: 2200px;
+}
+
 /* General Styles */
-#projects {
+.image-gallery-section{
+    background-color: #000;
+}
+.ourproject-h-s{
     text-align: center;
     color: white;
 }
-
-.image-gallery-section {
-    background-color: black;
-    padding: 40px 20px;
+.projec-h{
+    padding-top: 50px;
+    font-size: 20px;
+    /* display: flex; */
+    text-align: center;
+    color: white;
 }
-
 .gallery-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
     overflow: hidden;
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
 }
@@ -1538,17 +1556,13 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
-/* Default Image Styles */
 .image-container img {
-    width: calc(33.333% - 10px); /* Three images per row with gap */
+    width: 33.333%;
     height: auto;
     box-sizing: border-box;
     padding: 5px;
-    border-radius: 15px;
-    cursor: pointer; /* Indicate that the image is clickable */
 }
 
-/* Pagination Controls */
 .pagination-btn {
     background-color: #333;
     color: white;
@@ -1559,30 +1573,28 @@ button[type="submit"]:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
 }
 
 .prev {
-    left: 10px;
+    left: 0;
 }
 
 .next {
-    right: 10px;
+    right: 0;
 }
 
-/* Disable pagination buttons when necessary */
 .pagination-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-
+/* Full Screen Modal */
 /* Full Screen Modal */
 .modal {
-    display: none; /* Ensure modal is hidden by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0; /* Start from the top of the viewport */
+    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -1595,26 +1607,25 @@ button[type="submit"]:hover {
 /* Modal Content */
 .modal-content {
     display: block;
-    max-width: 90%;
+    max-width: 80%;
     max-height: 80%;
     margin: auto;
-    border-radius: 10px;
-    position: relative;
+    border-radius: 10px; /* Optional: for rounded corners */
 }
 
 /* Close Button */
 .close {
     position: absolute;
-    top: 20px; /* Move it a bit from the top */
-    right: 20px; /* Move it a bit from the right */
+    top: 20px;
+    right: 20px; /* Adjust this value to position the button as needed */
     color: #fff;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2;
+    z-index: 2; /* Ensure the button is above the modal content */
 }
 
-/* Pagination Controls inside modal */
+/* Next and Previous Buttons in Modal */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -1641,41 +1652,6 @@ button[type="submit"]:hover {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Media Queries for Responsive Design */
-
-/* For tablets and smaller desktops */
-@media (max-width: 1024px) {
-    .image-container img {
-        width: calc(50% - 10px); /* Two images per row with gap */
-    }
-
-    .pagination-btn {
-        font-size: 16px;
-        padding: 8px;
-    }
-}
-
-/* For mobile screens */
-@media (max-width: 768px) {
-    .gallery-container {
-        padding: 0 10px; /* Add padding to avoid edge-to-edge content */
-    }
-
-    .image-container img {
-        width: calc(100% - 10px); /* One image per row with gap */
-    }
-
-    .pagination-btn {
-        font-size: 14px;
-        padding: 6px;
-    }
-
-    .modal-content {
-        max-width: 90%;
-        max-height: 90%;
-    }
 }
 
 /* Section: Video with Background Image and Lines */
@@ -2015,7 +1991,7 @@ body {
     }
 
     .submit-button {
-        width: 100%; /* Full width for submit button on mobile screens */
+         /* Full width for submit button on mobile screens */
         padding: 15px; /* Larger padding for better touch interaction */
         font-size: 18px; /* Larger font size for better readability */
     }
