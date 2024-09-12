@@ -122,6 +122,7 @@
                 <label for="message">Message</label>
             </div>
             <button type="submit">Submit</button>
+            
         </form>
     </div>
 </div>
@@ -850,7 +851,7 @@ We execute the job in strict quality and time adherence
 
 
 <button class="scroll-to-top" aria-label="Scroll to top">&#11165;</button>
-<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
+<a href="https://wa.me/+91-9999114181" target="_blank" class="whatsapp-button">
     <img src="/Assets/whatsapp-brands-solid.svg" alt="" srcset="">
 </a>
 
@@ -861,17 +862,40 @@ We execute the job in strict quality and time adherence
      
         // scripts.js
         document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const menu = document.querySelector('.menu');
-            if (menuToggle && menu) {
-                menuToggle.addEventListener('click', () => {
-                    console.log('Menu toggle button clicked');
-                    menu.classList.toggle('active');
-                });
-            } else {
-                console.error('Menu toggle button or menu not found');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    if (menuToggle && menu) {
+        // Toggle menu visibility when the button is clicked
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent click from propagating to the document
+            const isActive = menu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+            menu.setAttribute('aria-hidden', !isActive);
+        });
+
+        // Close menu when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menu.setAttribute('aria-hidden', 'true');
             }
         });
+
+        // Close menu when clicking on a menu link
+        menu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                menu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    } else {
+        console.error('Menu toggle button or menu not found');
+    }
+});
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -912,5 +936,7 @@ We execute the job in strict quality and time adherence
 });
 
 </script>
+
+
 </body>
 </html>
