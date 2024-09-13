@@ -1615,15 +1615,46 @@ button[type="submit"]:hover {
     justify-content: center;
 }
 
-/* Modal Content */
+/* Basic styling for the modal content */
 .modal-content {
     display: block;
-    max-width: 80%;
-    max-height: 80%;
-    margin: 90% 40px;
-    border-radius: 10px; /* Optional: for rounded corners */
+    max-width: 90vw; /* Adjusts max width to 90% of viewport width */
+    max-height: 90vh; /* Adjusts max height to 90% of viewport height */
+    margin: 5vh auto; /* Centers the modal vertically with some margin */
+    border-radius: 10px;
     z-index: 1003;
+    overflow: auto; /* Allows scrolling if content overflows */
+    background-color: #fff; /* Optional: Sets a background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
 }
+
+/* Optional: Adjustments for very small screens */
+@media (max-width: 576px) {
+    .modal-content {
+        max-width: 95vw; /* 95% of viewport width on very small screens */
+        max-height: 95vh; /* 95% of viewport height on very small screens */
+        margin: 30vh auto; /* Reduces margin for smaller screens */
+    }
+}
+
+/* Optional: Adjustments for medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    .modal-content {
+        max-width: 80vw; /* 80% of viewport width on medium screens */
+        max-height: 80vh; /* 80% of viewport height on medium screens */
+        margin: 30vh auto; /* Centers the modal with a margin */
+    }
+}
+
+/* Optional: Adjustments for large screens */
+@media (min-width: 769px) {
+    .modal-content {
+        max-width: 60vw; /* 60% of viewport width on large screens */
+        max-height: 60vh; /* 60% of viewport height on large screens */
+        margin: 20vh auto; /* Centers the modal with a larger margin */
+    }
+}
+
 
 /* Close Button */
 .close {
